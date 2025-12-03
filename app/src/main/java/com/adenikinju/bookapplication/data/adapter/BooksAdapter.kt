@@ -22,11 +22,10 @@ class BooksAdapter(
         holder: BooksViewHolder,
         position: Int
     ) {
-        val d = holder.apply {
+        holder.apply {
            title.text = listItems?.get(position)?.title
            id.text = listItems?.get(position)?.id.toString()
         }
-
     }
 
     override fun getItemCount(): Int {
@@ -34,7 +33,7 @@ class BooksAdapter(
     }
 
 
-    inner class BooksViewHolder(view: BookBinding): RecyclerView.ViewHolder(view.root) {
+    class BooksViewHolder(view: BookBinding): RecyclerView.ViewHolder(view.root) {
         val title = view.tvTitle
         val id = view.tvAuthor
         val price = view.tvPrice

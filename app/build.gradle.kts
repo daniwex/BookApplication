@@ -50,12 +50,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     // retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
     // hilt
-    implementation("com.google.dagger:hilt-android:2.57.2") // Use the latest stable version
-    ksp("com.google.dagger:hilt-compiler:2.57.2")
+    implementation(libs.hilt.android) // Use the latest stable version
+    ksp(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.lifecycle.viewmodel)
+
+    // okhttp
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
 }
